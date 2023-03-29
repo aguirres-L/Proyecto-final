@@ -1,0 +1,560 @@
+html{
+    box-sizing: border-box; /*pasa a formar parte del body*/
+    font-family: sans-serif;
+    font-size: 16px; /*Le doy el tamaño a las letras*/
+}
+body{ /* Con esto le reseto el borde que tiene el body por defecto */
+    margin: 0;
+   /* overflow-x: hidden;  que hace que el navegador oculte todos los contenidos que se salen de la caja del elemento*/
+                        /* con -x me permite moverme desde arriba hacia abajo en formato "scroll" */
+
+    min-height: 100vh; /* Le doy un maximo de altura */
+    display: flex;
+    flex-direction: column; /* Le indico que quiero los elementos en columna*/
+    
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit; /* para que el tamaño de las cajas comiencen desde los bordes*/
+}
+
+img{ /* tamaño de las img auto responsibas*/
+    max-width: 100%;
+    height: auto;
+}
+main{ /* el main ocupa un espacio importante en relacion a la pagina, eso me permite posicionar el "Footer" al final de la pagina y no pegado al main*/
+    flex-grow: 1;
+    align-self: center;
+}
+main h1{
+    color:gray;
+}
+main img{
+    background-color: darkblue;
+    margin-left: 9%;
+}
+
+
+/* posiciono todo en el medio de la pag*/
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 992px;
+}
+
+.header{    /* le indico que el header tendra 5rem de ancho y color gris */
+    padding: .5rem; /* con o.5 rem me marca un titel justo */
+    background-color: black
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-around; /* puedo separa los elemtos */
+    align-items: center; /* a los 2 eleme los posiciono en el centro */
+    
+}
+
+
+
+@media (max-width:800px) {  
+
+
+    .header-content {
+        justify-content: stretch;
+    }
+    .menuLogo{
+        justify-content: stretch;
+    }
+    
+    
+    .menu {
+        position: absolute;
+        margin-left: 60%;
+    }
+    
+    
+    .menuLogo a img{
+        display: none;
+        }
+        
+    .foot{
+        margin-right: 200px;
+    }
+    
+    .perros{
+    display: none;
+    }
+    .gatos{
+    display: none;
+    }
+    .pez{
+    display: none;
+    }
+    
+        
+}
+
+
+.home{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: 200px;    
+    opacity: .8;
+}
+
+.menuLogo{
+    display: flex;
+    justify-content: space-around; /* Creo que space-between no tiene nuncion aca */
+    font-size: 205%; /* Le doy tamaño a las letras del muenu */
+}
+.menuLogo a{
+    color: white;
+    text-decoration: none;
+}
+
+.menuLogo a:hover{
+    color: white;
+    opacity: 9;
+    text-shadow: 0px 0px 5px #fffbfb;    
+}
+
+
+.menuLogo a img{
+padding: 1px;
+    width: 150px;
+    height: 120px;
+}
+
+
+.menu{
+    display: flex;
+    justify-content: space-between; /* Creo que space-between no tiene nuncion aca */
+    font-size: 205%; /* Le doy tamaño a las letras del muenu */
+}
+.menu a {
+    color: white;
+    transition: all .3s ease-in-out;
+    text-decoration: none;
+    opacity: .9;
+}
+
+.menu a:hover{
+    color: white;
+    opacity: 9;
+    text-shadow: 0px 0px 5px #fffbfb;
+}
+
+
+
+
+.perros{
+    height: 20px;
+    border-radius: 15%;
+    color: white;
+    background-color: black;
+    font-family: sans-serif;
+    visibility: hidden;
+}
+
+
+.perros option {
+    color: white;
+    font-size: 16px;
+}
+.perros option:checked {
+    color: black;
+    background-color: white;
+}
+
+.gatos{
+    height: 20px;
+    border-radius: 15%;
+    color: white;
+    background-color: black;
+    font-family: sans-serif;
+    visibility: hidden;
+}
+
+.gatos option {
+    color: white;
+    font-size: 16px;
+}
+.gatos option:checked {
+    color: black;
+    background-color: white;
+}
+
+
+
+
+
+.pez{
+
+    height: 20px;
+    border-radius: 15%;
+    color: white;
+    background-color: black;
+    font-family: sans-serif;
+    visibility: hidden;
+}
+
+
+
+.pez option {
+    color: white;
+    font-size: 16px;
+}
+.pez option:checked {
+    color: black;
+    background-color: white;
+}
+
+
+
+footer{
+    background-color: rgb(76, 76, 76);
+    color: white;
+    margin-top: auto;
+}
+footer p{
+    margin-left: 50%;
+}
+
+.foot{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+
+/* Nav */
+
+.info {
+    color: white;
+}
+
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 992px;
+}
+
+.header-nav{    /* le indico que el header tendra 5rem de ancho y color gris */
+    padding: .5rem; /* con o.5 rem me marca un titel justo */
+    background-color: rgb(76, 76, 76);
+    border-bottom: solid 2px white;
+}
+
+
+
+
+.header-content-nav {
+    display: flex;
+    justify-content: space-between; /* puedo separa los elemtos */
+    align-items: center; /* a los 2 eleme los posiciono en el centro */
+}
+.nav1{
+    display: flex;
+    justify-content: space-between; /* Creo que space-between no tiene nuncion aca */
+    font-size: 155%; /* Le doy tamaño a las letras del muenu */
+    margin-left: 3%;
+}
+.nav1 a{
+    margin-right: 15px;
+}
+.nav2 a{
+color: white;
+}
+
+
+
+
+.nav3{
+    margin-right: 4%;
+}
+.nav3 a{
+    margin-left: 10px;
+}
+
+/* Card
+
+.cardHome{
+    border: red 2px solid ;
+}
+
+.cardPerro{
+    border: 2px solid red;
+}
+*/
+
+.titulo{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+text-align: center;
+}
+
+.mensaje{
+    text-align: center;
+    width: 60%;
+   margin-left: 20%;
+   padding: 1px;
+   border: solid 1px white;
+   box-shadow: 0px 0px 10px #000;
+   color: white;
+   background-color: #625f5f;
+   font-family: sans-serif;
+   font-size: larger;
+   margin-top: 30px;
+   border-radius: 5px;
+}
+
+#productos{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-family: sans-serif;
+    font-size: 40;
+    width: 200px;
+    margin-left: 10%;
+    border-bottom: solid black 2px;
+}
+
+
+.articulos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Estilo de las card front-back*/
+
+/*
+.card {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  */
+
+  .card {
+    position: relative;
+    width: 300px;
+    height: 450px;
+    margin: 15px;
+  }
+  .card img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+   
+  }
+  
+  .face.front{
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0px 5px 10px #000;
+  }
+  .face.front h3 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    background: rgba(0,0,0,.4);
+    text-align: center;
+  }
+  
+  .face.back{
+  transform: perspective(600px) rotateY(180deg);
+  background: rgb(18, 18, 18);
+  padding: 15px;
+  color: #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  box-shadow: 0px 5px 10px #000 ;
+  }
+ .back h4{
+    background: none;
+    width: 100px;
+    align-self: center;
+    border:  rgb(18, 18, 18);
+    border-radius: 10px;
+    
+  }
+
+ .back h3{
+    font-size: 25px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+ }
+ .back p{
+    letter-spacing: 1px;
+ }
+ 
+ /* efect card */
+ 
+ .card:hover .front{
+     transform: perspective(600px) rotateY(180deg);
+    }
+   
+ .card:hover .back{
+    transform: perspective(600px) rotateY(360deg);
+}
+
+
+/* Estilo para Slider 1ro*/
+
+.carousel {
+    position: relative;
+    margin: 0 auto;
+    width: 89%;
+    height: 400px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    margin-top: 55px;
+    box-shadow: 0px 0px 20px #000;
+  }
+  
+  .carousel-images {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease;
+  }
+  
+  .carousel-images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .prev-btn {
+    left: 0;
+  }
+  
+  .next-btn {
+    right: 0;
+  }
+  
+  
+  /* 2do Slider*/
+ 
+  
+  .destacado h3{
+    font-family: sans-serif;
+    font-size: 40px;
+    text-align: center;
+  }
+  
+  .slider {
+  position: relative;
+  margin: 0 auto;
+  width: 80%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.slider-images {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease;
+}
+
+.slider-images img {
+  width: 42%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.prev-btn {
+  left: 0;
+}
+
+.next-btn {
+  right: 0;
+}
+
+/* Btn WPP*/
+
+.fa-brands.fa-whatsapp{
+    position: fixed;
+    z-index: 999;
+    bottom: -.3vh;
+    right: calc(-1.4rem + .1vw);  /* el metodo "calc" me permite hacer calculo sobre el tamaño del elemento, le indicoque coloco al boton a 1 V W de distancia*/
+     width: 1.5em;
+     height: 1.5em;
+     border-radius: 50px;
+     font-size: 4rem;   /* Le da un grosor a la Felcha */
+     font-weight: bold; /* Le da un groso al estylo*/
+
+    cursor: pointer; /*Con cursor "pointer" le inidco que al momento de pasar por encuma del elemnto el curso pasa de flecha a "mano " ? */
+    outline: 0;
+    border: 0;
+
+    }
+    
+    
+    .fa-brands.fa-whatsapp{
+    font-size: 3em;
+    color:  rgb(76, 76, 76);
+    }
+    .fa-brands.fa-whatsapp:hover{
+        color: green;
+    }
